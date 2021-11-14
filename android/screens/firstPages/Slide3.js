@@ -6,18 +6,20 @@ import {LinearGradient} from 'expo-linear-gradient';
 export default Slide3 = ({navigation})=>{
     return(
         <View style={styles.container}>
-        <View style={{justifyContent: 'center',alignItems: "center",marginTop: 120}}>
+        <View style={{justifyContent: 'center',alignItems: "center",backgroundColor: "#fff",flex: 1}}>
             <Image source={image1} style={{width: "75%",height: 250}}></Image>
 
-            <View style={{marginTop: 25,justifyContent: 'center',alignItems: "center"}}>
+            <View style={{marginTop: 25,justifyContent: 'center',alignItems: "center",marginBottom: 100}}>
                 <Text style={{fontSize: 20,fontWeight: "bold"}}>Optimise your Expenses</Text>
                 <Text style={{fontSize: 16,marginTop: 10}}>Track your expenses to optimise your spending</Text>
 
                 <View style={{flexDirection: "row",marginTop: 30}}>
-                   <View onClick={()=>navigation.navigate("slide1")} style={styles.ballons}></View>
-                   <View style={styles.ballons}></View>
-                   <View style={styles.activeBallon}></View>
-                   <View style={styles.ballons}></View>
+                <View style={{flexDirection: "row",marginTop: 30}}>
+            <Text onPress={()=>navigation.navigate("slide1")} style={[styles.ballons,{fontSize: 16}]}></Text>
+            <Text onPress={()=>navigation.navigate("slide2")} style={[styles.ballons,{fontSize: 16}]}></Text>
+            <Text style={[styles.activeBallon,{fontSize: 16}]}></Text>
+            <Text onPress={()=>navigation.navigate("slide4")} style={[styles.ballons,{fontSize: 16}]}></Text>
+            </View>
                     </View>
 
             </View>
@@ -25,7 +27,7 @@ export default Slide3 = ({navigation})=>{
                
             <TouchableOpacity
                     style={styles.signIn}
-                    onPress={()=>navigation.navigate("login")}
+                    onPress={()=>navigation.navigate("slide4")}
                 >
                 <LinearGradient
                     colors={['#FF7518', '#FF7518']}
@@ -69,8 +71,7 @@ const styles = StyleSheet.create({
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 10,
-        marginTop: 60
+        borderRadius: 10
     },
     textSign: {
         fontSize: 18,

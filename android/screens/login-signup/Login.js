@@ -93,6 +93,7 @@ export default Login = ({navigation})=>{
             <Text onPress={()=>navigation.navigate("forgotPassword")} style={{fontSize: 16}}>Forgot Password?</Text>
             <TouchableOpacity
                     style={styles.signIn}
+                    onPress={()=>navigation.navigate("bottomNav")}
                 >
                 <LinearGradient
                     colors={['#FF7518', '#FF7518']}
