@@ -1,12 +1,13 @@
 import React from 'react'
 import { ScrollView,Text,View,Image,StyleSheet,TouchableOpacity } from 'react-native'
 import logo from '../../../assets/images/logo.png'
+import expenses from '../../../assets/images/expenses.png'
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import * as Animatable from 'react-native-animatable';
 import {LinearGradient} from 'expo-linear-gradient';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default SalesSummary = ({navigation})=>{
+export default ExpenseSummary = ({navigation})=>{
      return(
         <View style={styles.container}>
                    <Animatable.View 
@@ -29,104 +30,21 @@ export default SalesSummary = ({navigation})=>{
          </View>
 
         <View style={{justifyContent: 'center',alignItems: "center",marginBottom: 10,marginTop: 15}}>
-            <Text style={{fontSize: 25,color: "#073B80"}}>Sales Summary</Text>
+            <Text style={{fontSize: 25,color: "#073B80"}}>Expenses Summary</Text>
         </View>
 
-        <ScrollView style={{marginBottom: 30}} horizontal={true} showsHorizontalScrollIndicator={false}>
-            <View style={{flexDirection: "row",marginLeft: 20}}>
-            <View style={styles.box}>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-            <FontAwesome 
-                    name="money"
-                    size={20}
-                    style={{color: "#FF7518",fontSize: 24,marginBottom: 5}}
-                />
-            </View>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-                <Text style={{fontSize: 15}}>12,000 RWF</Text>
-                <Text style={{fontSize: 15}}>Today's sales</Text>
-                </View>
-            </View>
-
-            <View style={styles.box}>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-            <FontAwesome 
-                    name="money"
-                    size={20}
-                    style={{color: "#FF7518",fontSize: 24,marginBottom: 5}}
-                />
-            </View>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-                <Text style={{fontSize: 15}}>12,000 RWF</Text>
-                <Text style={{fontSize: 15}}>Today's sales</Text></View>
-            </View>
-
-            <View style={styles.box}>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-            <FontAwesome 
-                    name="money"
-                    size={20}
-                    style={{color: "#FF7518",fontSize: 24,marginBottom: 5}}
-                />
-            </View>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-                <Text style={{fontSize: 15}}>12,000,000 RWF</Text>
-                <Text style={{fontSize: 15}}>Last week</Text>
-            </View></View>
-
-            <View style={styles.box}>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-            <FontAwesome 
-                    name="money"
-                    size={20}
-                    style={{color: "#FF7518",fontSize: 24,marginBottom: 5}}
-                />
-            </View>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-                <Text style={{fontSize: 15}}>12,000,000 RWF</Text>
-                <Text style={{fontSize: 15}}>Yesterday</Text>
-                </View>
-            </View>
-
-            <View style={styles.box}>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-            <FontAwesome 
-                    name="money"
-                    size={20}
-                    style={{color: "#FF7518",fontSize: 24,marginBottom: 5}}
-                />
-            </View>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-                <Text style={{fontSize: 15}}>12,000,000 RWF</Text>
-                <Text style={{fontSize: 15}}>Last month</Text>
-                </View>
-            </View>
-
-            <View style={styles.box}>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-            <FontAwesome 
-                    name="money"
-                    size={20}
-                    style={{color: "#FF7518",fontSize: 24,marginBottom: 5}}
-                />
-            </View>
-            <View style={{justifyContent: 'center',alignItems: "center"}}>
-                <Text style={{fontSize: 15}}>12,000,000 RWF</Text>
-                <Text style={{fontSize: 15}}>Last year</Text>
-                </View>
-            </View>
-            
-            </View>
-        </ScrollView>
+        <View style={{justifyContent: 'center',alignItems: "center"}}>
+        <Image source={expenses}></Image>
+        </View>
 
          </View>
          </Animatable.View>
 
          <ScrollView style={styles.salesActivity}>
-            <View><Text style={{fontSize: 22,color: "#073B80",marginBottom: 20}}>Sales Activity</Text></View>
+            <View><Text style={{fontSize: 22,color: "#073B80",marginBottom: 20}}>Expenses Activity</Text></View>
 
             <View style={{marginBottom: 20,paddingBottom: 10,borderBottomColor: "lavender",borderBottomWidth:0.8}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -134,7 +52,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -142,7 +60,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -150,7 +68,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -158,7 +76,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -166,7 +84,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -174,7 +92,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -182,7 +100,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -190,7 +108,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -198,7 +116,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -206,7 +124,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -214,7 +132,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -222,7 +140,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -230,7 +148,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -238,7 +156,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -246,7 +164,7 @@ export default SalesSummary = ({navigation})=>{
             </View>
 
             <View style={{marginBottom: 20,paddingBottom: 10}}>
-                <Text style={{fontSize: 16,marginLeft: 30}}>Cement
+                <Text style={{fontSize: 16,marginLeft: 30}}>Transport
                 </Text>
                 <Text style={{fontSize: 16,color: "grey",marginLeft: 30}}>Cash</Text>
                 <Text style={{position: "absolute",right: 20,fontSize: 16}}>RF 100.00</Text>
@@ -254,12 +172,12 @@ export default SalesSummary = ({navigation})=>{
             </View>
          </ScrollView>
 
-         <TouchableOpacity style={[styles.button, styles.actionBtn]} onPress={()=>navigation.navigate("newSales")}>
+         <TouchableOpacity style={[styles.button, styles.actionBtn]} onPress={()=>navigation.navigate("newExpense")}>
          <LinearGradient
                     colors={['#FF7518', '#FF7518']}
                 >
          <Text>
-         <Ionicons name={"add"} size={40} color={"#FFF"} />
+             <Ionicons name={"add"} size={40} color={"#FFF"} />
         </Text>
         </LinearGradient>
         </TouchableOpacity>
